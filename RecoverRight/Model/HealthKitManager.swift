@@ -56,3 +56,34 @@ class HealthKitManager {
         healthStore?.execute(query)
     }
 }
+
+extension HealthKitManager {
+    func getWeeklyHeartRate(completion: @escaping ([Double]?, Error?) -> Void) {
+        guard let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate) else {
+            completion(nil, HealthError.dataTypeNotAvailable)
+            return
+        }
+
+        let calendar = NSCalendar.current
+        let now = Date()
+        guard let startDate = calendar.date(byAdding: .day, value: -7, to: now) else {
+            completion(nil, nil)
+            return
+        }
+
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: now, options: .strictStartDate)
+
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)
+        let query = HKSampleQuery(sampleType: heartRateType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: [sortDescriptor]) { _, samples, error in
+            guard let samples = samples as? [HKQuantitySample] else {
+                completion(nil, error)
+                return
+            }
+
+            let heartRates = samples.map { $0.quantity.doubleValue(for: HKUnit(from: "count/min")) }
+            completion(heartRates, nil)
+        }
+
+        healthStore?.execute(query)
+    }
+}

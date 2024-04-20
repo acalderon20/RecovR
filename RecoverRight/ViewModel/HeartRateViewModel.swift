@@ -7,24 +7,23 @@
 import Foundation
 
 class HeartRateViewModel: ObservableObject {
-    @Published var heartRate: String = "Unknown"
-    private var healthKitManager = HealthKitManager.shared
+    @Published var weeklyHeartRates: [Double] = []
+    @Published var showAlert = false
 
-    func fetchHeartRate() {
-        healthKitManager.authorizeHealthKit { [weak self] authorized, error in
-            if authorized {
-                self?.healthKitManager.getMostRecentHeartRate { rate, error in
-                    if let rate = rate {
-                        DispatchQueue.main.async {
-                            self?.heartRate = String(format: "%.0f", rate)
-                        }
-                    } else {
-                        print("Error fetching heart rate: \(String(describing: error))")
-                    }
+    func fetchWeeklyHeartRates() {
+        HealthKitManager.shared.getWeeklyHeartRate { [weak self] rates, error in
+            if let rates = rates {
+                DispatchQueue.main.async {
+                    self?.weeklyHeartRates = rates
+                    self?.checkForHighRates(rates)
                 }
-            } else {
-                print("HealthKit authorization failed: \(String(describing: error))")
             }
+        }
+    }
+
+    private func checkForHighRates(_ rates: [Double]) {
+        if rates.contains(where: { $0 > 100 }) {
+            self.showAlert = true
         }
     }
 }

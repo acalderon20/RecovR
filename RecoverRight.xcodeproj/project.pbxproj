@@ -15,6 +15,8 @@
 		91FBD19D2BD3B7D70068178A /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD19C2BD3B7D70068178A /* HealthKitManager.swift */; };
 		91FBD19F2BD3B7F10068178A /* HeartRateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD19E2BD3B7F10068178A /* HeartRateViewModel.swift */; };
 		91FBD1A12BD3B8690068178A /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1A02BD3B8690068178A /* HeartRateView.swift */; };
+		91FBD1A42BD3FD0F0068178A /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1A32BD3FD0F0068178A /* JournalEntry.swift */; };
+		91FBD1A82BD3FD8E0068178A /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1A72BD3FD8E0068178A /* JournalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		91FBD19E2BD3B7F10068178A /* HeartRateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateViewModel.swift; sourceTree = "<group>"; };
 		91FBD1A02BD3B8690068178A /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
 		91FBD1A22BD3B8C00068178A /* RecoverRight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecoverRight.entitlements; sourceTree = "<group>"; };
+		91FBD1A32BD3FD0F0068178A /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		91FBD1A72BD3FD8E0068178A /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				91FBD19C2BD3B7D70068178A /* HealthKitManager.swift */,
+				91FBD1A32BD3FD0F0068178A /* JournalEntry.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 			children = (
 				91FBD18B2BD3B6EC0068178A /* ContentView.swift */,
 				91FBD1A02BD3B8690068178A /* HeartRateView.swift */,
+				91FBD1A72BD3FD8E0068178A /* JournalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,9 +183,11 @@
 			files = (
 				91FBD18C2BD3B6EC0068178A /* ContentView.swift in Sources */,
 				91FBD19F2BD3B7F10068178A /* HeartRateViewModel.swift in Sources */,
+				91FBD1A82BD3FD8E0068178A /* JournalView.swift in Sources */,
 				91FBD18E2BD3B6EC0068178A /* Item.swift in Sources */,
 				91FBD19D2BD3B7D70068178A /* HealthKitManager.swift in Sources */,
 				91FBD18A2BD3B6EC0068178A /* RecoverRightApp.swift in Sources */,
+				91FBD1A42BD3FD0F0068178A /* JournalEntry.swift in Sources */,
 				91FBD1A12BD3B8690068178A /* HeartRateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +326,7 @@
 				DEVELOPMENT_TEAM = A26R2TGLCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your heart rate data to provide personalized health insights and recommendations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -348,6 +357,7 @@
 				DEVELOPMENT_TEAM = A26R2TGLCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your heart rate data to provide personalized health insights and recommendations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
