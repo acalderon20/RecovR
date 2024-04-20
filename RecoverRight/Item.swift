@@ -1,5 +1,3 @@
-//
-//  Item.swift
 //  RecoverRight
 //
 //  Created by Adolfo Calderon on 4/20/24.

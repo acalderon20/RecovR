@@ -11,30 +11,34 @@ import Charts
 struct HeartRateView: View {
     @ObservedObject var viewModel = HeartRateViewModel()
 
-    
     var body: some View {
         VStack {
             if !viewModel.weeklyHeartRates.isEmpty {
                 Chart {
+                    RuleMark(y: .value("Threshhold", 100))
+                        .foregroundStyle(.red)
                     ForEach(Array(viewModel.weeklyHeartRates.enumerated()), id: \.offset) { index, rate in
                         LineMark(
                             x: .value("Day", index),
                             y: .value("Heart Rate", rate)
                         )
+                        .interpolationMethod(.catmullRom) // Smooths the line
+
+                        .foregroundStyle(LinearGradient(gradient: Gradient(colors: [.red, .blue]), startPoint: .top, endPoint: .bottom)) // prettify the data
                     }
                 }
                 .chartXAxis {
                     AxisMarks(values: .automatic) { value in
                         AxisGridLine()
                         AxisTick()
-                        AxisValueLabel("\(value.as(Double.self)!, specifier: "%.0f")") // Explicit string format
+                        AxisValueLabel("\(value.as(Double.self)!, specifier: "%.0f")")
                     }
                 }
                 .chartYAxis {
                     AxisMarks(values: .automatic) { value in
                         AxisGridLine()
                         AxisTick()
-                        AxisValueLabel("\(value.as(Double.self)!, specifier: "%.0f")") // Explicit string format
+                        AxisValueLabel("\(value.as(Double.self)!, specifier: "%.0f")")
                     }
                 }
                 .frame(height: 300)
@@ -44,9 +48,11 @@ struct HeartRateView: View {
             }
             
             if viewModel.showAlert {
-                Text("Warning: Heart Rate has reached over 100bpm!")
+                Text("Heart Rate has reached over 100bpm!")
                     .foregroundColor(.red)
                     .padding()
+                    .background(Color.black.opacity(0.7))
+                    .cornerRadius(10)
             }
         }
         .onAppear {
@@ -54,6 +60,7 @@ struct HeartRateView: View {
         }
     }
 }
+
 
 
 #Preview {

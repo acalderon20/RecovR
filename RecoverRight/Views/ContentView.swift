@@ -17,7 +17,11 @@ struct ContentView: View {
                 }
             JournalView()
                 .tabItem {
-                    Label("Journal", systemImage: "book")
+                    Label("Journal", systemImage: "square.and.pencil")
+                }
+            MedicineView()
+                .tabItem {
+                    Label("Medicine", systemImage: "pill")
                 }
         }
     }
