@@ -30,7 +30,7 @@ struct JournalView: View {
                         }
                     }
                 }
-                .navigationTitle("Journals")
+                .navigationTitle("Journal")
                 .sheet(isPresented: $showNewEntryView) {
                     NewJournalEntryView(showNewEntryView: $showNewEntryView, newJournalContent: $newJournalContent)
                 }

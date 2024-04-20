@@ -130,6 +130,8 @@
 			dependencies = (
 			);
 			name = RecoverRight;
+			packageProductDependencies = (
+			);
 			productName = RecoverRight;
 			productReference = 91FBD1862BD3B6EC0068178A /* RecoverRight.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 91FBD17D2BD3B6EC0068178A;
+			packageReferences = (
+				91FBD1AB2BD47CB00068178A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 91FBD1872BD3B6EC0068178A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -402,6 +407,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		91FBD1AB2BD47CB00068178A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 91FBD17E2BD3B6EC0068178A /* Project object */;
 }
