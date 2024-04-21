@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91A1E7962BD4EB1B00CDABBD /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A1E7952BD4EB1B00CDABBD /* Medication.swift */; };
 		91FBD18A2BD3B6EC0068178A /* RecoverRightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1892BD3B6EC0068178A /* RecoverRightApp.swift */; };
 		91FBD18C2BD3B6EC0068178A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD18B2BD3B6EC0068178A /* ContentView.swift */; };
 		91FBD18E2BD3B6EC0068178A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD18D2BD3B6EC0068178A /* Item.swift */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91A1E7952BD4EB1B00CDABBD /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		91A1E7972BD4F19000CDABBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		91FBD1862BD3B6EC0068178A /* RecoverRight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecoverRight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FBD1892BD3B6EC0068178A /* RecoverRightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverRightApp.swift; sourceTree = "<group>"; };
 		91FBD18B2BD3B6EC0068178A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		91FBD1882BD3B6EC0068178A /* RecoverRight */ = {
 			isa = PBXGroup;
 			children = (
+				91A1E7972BD4F19000CDABBD /* Info.plist */,
 				91FBD1A22BD3B8C00068178A /* RecoverRight.entitlements */,
 				91FBD1892BD3B6EC0068178A /* RecoverRightApp.swift */,
 				91FBD1992BD3B7790068178A /* Model */,
@@ -93,6 +97,7 @@
 			children = (
 				91FBD19C2BD3B7D70068178A /* HealthKitManager.swift */,
 				91FBD1A32BD3FD0F0068178A /* JournalEntry.swift */,
+				91A1E7952BD4EB1B00CDABBD /* Medication.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				91FBD19F2BD3B7F10068178A /* HeartRateViewModel.swift in Sources */,
 				91FBD1A82BD3FD8E0068178A /* JournalView.swift in Sources */,
 				91FBD18E2BD3B6EC0068178A /* Item.swift in Sources */,
+				91A1E7962BD4EB1B00CDABBD /* Medication.swift in Sources */,
 				91FBD19D2BD3B7D70068178A /* HealthKitManager.swift in Sources */,
 				91FBD18A2BD3B6EC0068178A /* RecoverRightApp.swift in Sources */,
 				91FBD1AA2BD459740068178A /* MedicineView.swift in Sources */,
@@ -339,6 +345,7 @@
 				DEVELOPMENT_TEAM = A26R2TGLCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecoverRight/Info.plist;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your heart rate data to provide personalized health insights and recommendations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -370,6 +377,7 @@
 				DEVELOPMENT_TEAM = A26R2TGLCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecoverRight/Info.plist;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your heart rate data to provide personalized health insights and recommendations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

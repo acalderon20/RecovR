@@ -7,7 +7,6 @@
 
 import SwiftUI
 import UserNotifications
-import SwiftData
 
 struct MedicineView: View {
     @State private var medicationName: String = ""
@@ -16,42 +15,41 @@ struct MedicineView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Medication Reminder")
-                    .font(.largeTitle)
-                    .padding()
+            List {
+                Section(header: Text("About Your Medication").font(.headline)) {
+                    Text("Timely adherence to your medication schedule is crucial for effective treatment. Always follow the guidance provided by your healthcare professional.")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
 
-                Text("Consistent and timely medication helps maintain an effective treatment regimen. Always follow your physician's prescriptions carefully.")
-                    .padding()
-                    .font(.callout)
-                    .multilineTextAlignment(.center)
-
-                Form {
-                    Section(header: Text("Add New Medication")) {
-                        TextField("Medication Name", text: $medicationName)
-                        DatePicker("Time to Take", selection: $timeToTakeMedicine, displayedComponents: .hourAndMinute)
-                        Button("Add Medication") {
-                            addMedication()
-                        }
+                Section(header: Text("Add Medication").font(.headline)) {
+                    TextField("Enter Medication Name", text: $medicationName)
+                    DatePicker("Select Time", selection: $timeToTakeMedicine, displayedComponents: .hourAndMinute)
+                    
+                    Button(action: addMedication) {
+                        Text("Add Medication")
+                            .frame(maxWidth: .infinity)
                     }
+                    .disabled(medicationName.isEmpty)
+                }
 
-                    Section(header: Text("Your Medications")) {
-                        ForEach(medications, id: \.id) { medication in
-                            HStack {
-                                Text(medication.name)
-                                Spacer()
-                                Text(medication.time, style: .time)
-                            }
+                if !medications.isEmpty {
+                    Section(header: Text("Current Medications").font(.headline)) {
+                        ForEach(medications) { medication in
+                            MedicationRow(medication: medication)
                         }
+                        .onDelete(perform: removeMedications)
                     }
                 }
             }
-            .navigationBarTitle("Manage Medications", displayMode: .inline)
+            .listStyle(GroupedListStyle())
+            .navigationBarTitle("Medication Manager", displayMode: .inline)
         }
-        .onAppear(perform: setupNotifications)
+        .onAppear(perform: registerNotifications)
     }
 
-    func addMedication() {
+    private func addMedication() {
         let newMedication = Medication(name: medicationName, time: timeToTakeMedicine)
         medications.append(newMedication)
         scheduleNotification(for: newMedication)
@@ -59,42 +57,50 @@ struct MedicineView: View {
         timeToTakeMedicine = Date()
     }
 
-    private func scheduleNotification(for medication: Medication) {
-        let content = UNMutableNotificationContent()
-        content.title = "Medication Reminder"
-        content.body = "Time to take your \(medication.name)"
-        content.sound = UNNotificationSound.default
-
-        let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: medication.time)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request)
+    private func removeMedications(at offsets: IndexSet) {
+        medications.remove(atOffsets: offsets)
     }
 
-    private func setupNotifications() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-            if success {
-                print("Notifications are allowed")
+    private func registerNotifications() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
+            if granted {
+                print("Notifications granted")
             } else if let error = error {
-                print("Notification Error: \(error.localizedDescription)")
+                print("Notifications error: \(error.localizedDescription)")
             }
+        }
+    }
+    
+    private func scheduleNotification(for medication: Medication) {
+        let content = UNMutableNotificationContent()
+        content.title = NSString.localizedUserNotificationString(forKey: "Time to take your medication!", arguments: nil)
+        content.body = NSString.localizedUserNotificationString(forKey: "Please take your \(medication.name).", arguments: nil)
+        content.sound = UNNotificationSound.default
+
+        let triggerDate = Calendar.current.dateComponents([.hour, .minute], from: medication.time)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: true)
+
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { error in
+             if let error = error {
+                 print("Error scheduling notification: \(error.localizedDescription)")
+             }
         }
     }
 }
 
-@Model
-class Medication: Identifiable {
-    var id = UUID()
-    var name: String
-    var time: Date
-    
-    init(name: String , time: Date) {
-        self.name = name
-        self.time = time
-        
+struct MedicationRow: View {
+    var medication: Medication
+
+    var body: some View {
+        HStack {
+            Text(medication.name)
+            Spacer()
+            Text(medication.time, style: .time)
+        }
     }
 }
+
 
 
 #Preview {

@@ -19,7 +19,8 @@ struct ContentView: View {
                     HeartRateView()  // Ensure you have defined this view somewhere in your code
                 }
                 .onAppear {
-                    showingHeartRate = true  // Automatically show HeartRateView when ContentView appears
+                    showingHeartRate = true
+                    // Automatically show HeartRateView when ContentView appears
                 }
         }
     }

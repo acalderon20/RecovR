@@ -75,7 +75,7 @@ struct JournalView: View {
             MedicineView()  // Ensure you have defined this view somewhere in your code
         }
     }
-
+    
     private var addButton: some View {
         Button(action: {
             withAnimation {

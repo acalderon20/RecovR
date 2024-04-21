@@ -69,11 +69,6 @@ struct HeartRateView: View {
     }
 }
 
-// ViewModel and HeartRateViewModel remains as you previously have it.
-
-
-// ViewModel and Preview code remains the same
-
 
 
 #Preview {
