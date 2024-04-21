@@ -18,6 +18,7 @@
 		91FBD1A42BD3FD0F0068178A /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1A32BD3FD0F0068178A /* JournalEntry.swift */; };
 		91FBD1A82BD3FD8E0068178A /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1A72BD3FD8E0068178A /* JournalView.swift */; };
 		91FBD1AA2BD459740068178A /* MedicineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1A92BD459740068178A /* MedicineView.swift */; };
+		91FBD1E32BD496DE0068178A /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1E22BD496DE0068178A /* FlipCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		91FBD1A32BD3FD0F0068178A /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 		91FBD1A72BD3FD8E0068178A /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		91FBD1A92BD459740068178A /* MedicineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineView.swift; sourceTree = "<group>"; };
+		91FBD1E22BD496DE0068178A /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				91FBD1A92BD459740068178A /* MedicineView.swift */,
 				91FBD1A02BD3B8690068178A /* HeartRateView.swift */,
 				91FBD1A72BD3FD8E0068178A /* JournalView.swift */,
+				91FBD1E22BD496DE0068178A /* FlipCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				91FBD19D2BD3B7D70068178A /* HealthKitManager.swift in Sources */,
 				91FBD18A2BD3B6EC0068178A /* RecoverRightApp.swift in Sources */,
 				91FBD1AA2BD459740068178A /* MedicineView.swift in Sources */,
+				91FBD1E32BD496DE0068178A /* FlipCardView.swift in Sources */,
 				91FBD1A42BD3FD0F0068178A /* JournalEntry.swift in Sources */,
 				91FBD1A12BD3B8690068178A /* HeartRateView.swift in Sources */,
 			);

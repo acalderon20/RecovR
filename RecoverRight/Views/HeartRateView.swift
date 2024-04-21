@@ -12,54 +12,67 @@ struct HeartRateView: View {
     @ObservedObject var viewModel = HeartRateViewModel()
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 20) {
+            Text("Heart Rate Monitor")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding(.top)
+
+            Text("Keeping track of your heart rate is essential for detecting conditions such as tachycardia, especially important after surgical procedures. The line at 100 BPM acts as a guide to quickly identify any unusual increases in heart rate, helping you stay informed about your heart health.")
+                .font(.subheadline)
+                .padding([.leading, .trailing, .bottom])
+
             if !viewModel.weeklyHeartRates.isEmpty {
                 Chart {
-                    RuleMark(y: .value("Threshhold", 100))
-                        .foregroundStyle(.red)
                     ForEach(Array(viewModel.weeklyHeartRates.enumerated()), id: \.offset) { index, rate in
                         LineMark(
                             x: .value("Day", index),
                             y: .value("Heart Rate", rate)
                         )
-                        .interpolationMethod(.catmullRom) // Smooths the line
-
-                        .foregroundStyle(LinearGradient(gradient: Gradient(colors: [.red, .blue]), startPoint: .top, endPoint: .bottom)) // prettify the data
+                        .interpolationMethod(.catmullRom)
+                        .foregroundStyle(LinearGradient(gradient: Gradient(colors: [.blue, .purple]), startPoint: .top, endPoint: .bottom))
                     }
-                }
-                .chartXAxis {
-                    AxisMarks(values: .automatic) { value in
-                        AxisGridLine()
-                        AxisTick()
-                        AxisValueLabel("\(value.as(Double.self)!, specifier: "%.0f")")
-                    }
-                }
-                .chartYAxis {
-                    AxisMarks(values: .automatic) { value in
-                        AxisGridLine()
-                        AxisTick()
-                        AxisValueLabel("\(value.as(Double.self)!, specifier: "%.0f")")
-                    }
+                    RuleMark(y: .value("Threshold", 100))
+                        .foregroundStyle(.red)
+                        .annotation(position: .top, alignment: .trailing) {
+                            Text("100 BPM Threshold")
+                                .font(.caption)
+                                .foregroundColor(.red)
+                                .padding(.horizontal, 4)
+                                .background(Color.white.opacity(0.7))
+                                .cornerRadius(4)
+                        }
                 }
                 .frame(height: 300)
-                .padding()
+                .padding(.horizontal)
             } else {
                 Text("Fetching data...")
+                    .frame(maxWidth: .infinity, alignment: .center)
             }
-            
-            if viewModel.showAlert {
-                Text("Heart Rate has reached over 100bpm!")
-                    .foregroundColor(.red)
-                    .padding()
-                    .background(Color.black.opacity(0.7))
-                    .cornerRadius(10)
-            }
+
+            let countOver100 = viewModel.weeklyHeartRates.filter { $0 > 100 }.count
+            Text("This week, your heart rate went above 100 BPM \(countOver100) times.")
+                .font(.callout)
+                .padding()
+                .background(Color(UIColor.secondarySystemBackground))
+                .cornerRadius(10)
+                .shadow(radius: 1)
         }
+        .padding()
+        .background(Color(UIColor.systemGroupedBackground))
+        .cornerRadius(15)
+        .shadow(radius: 10)
+        .padding()
         .onAppear {
             viewModel.fetchWeeklyHeartRates()
         }
     }
 }
+
+// ViewModel and HeartRateViewModel remains as you previously have it.
+
+
+// ViewModel and Preview code remains the same
 
 
 

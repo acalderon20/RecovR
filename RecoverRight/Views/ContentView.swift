@@ -8,25 +8,22 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @State private var isMenuExpanded = false
+    @State private var showingHeartRate = false
+    @State private var showingMedicineView = false
     
     var body: some View {
-        TabView {
-            HeartRateView()
-                .tabItem {
-                    Label("Heart", systemImage: "heart")
+        NavigationView {
+            JournalView() // Main content view
+                .sheet(isPresented: $showingHeartRate) {
+                    HeartRateView()  // Ensure you have defined this view somewhere in your code
                 }
-            JournalView()
-                .tabItem {
-                    Label("Journal", systemImage: "square.and.pencil")
-                }
-            MedicineView()
-                .tabItem {
-                    Label("Medicine", systemImage: "pill")
+                .onAppear {
+                    showingHeartRate = true  // Automatically show HeartRateView when ContentView appears
                 }
         }
     }
 }
-    
 
 #Preview {
     ContentView()
