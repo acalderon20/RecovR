@@ -1,0 +1,163 @@
+:root {
+    --primary-color: #0062E6;
+    --secondary-color: #33AEFF;
+    --highlight-color: #4A90E2; /* Neon green color for highlights */
+    --text-dark: #333;
+    --text-light: #b2b2b2; /* Light grey for text */
+    --background-dark: #0a0a0a; /* Dark grey for backgrounds */
+    --background-light: #121212; /* Even darker grey for footer and sections */
+    --font-family: 'Arial', sans-serif;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+    background: var(--background-light);
+    color: var(--text-light);
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s, padding 0.3s;
+  }
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+  }
+  .nav-items a, .login-btn {
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .nav-items a:hover, .login-btn:hover {
+    color: var(--highlight-color);
+    transform: translateY(-2px);
+  }
+  .login-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    background-color: var(--background-dark);
+    color: white;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: var(--highlight-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  .hero-btn:hover {
+    background-color: #e6b800;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  main {
+    padding: 2rem 5%;
+  }
+  /* Main content sections styling */
+  .intro-section {
+    padding: 4rem 0;
+    background-color: var(--background-dark);
+  }
+  .content-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  .intro-section h2 {
+    color: var(--highlight-color);
+    margin-bottom: 1rem;
+  }
+  .intro-section p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+  }
+  section {
+    padding: 60px 0;
+    background-color: var(--background-light);
+  }
+  section h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+  }
+  section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: auto;
+  }
+  footer {
+    background: var(--background-dark);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    .hero-btn {
+      padding: 0.8rem 2rem;
+    }
+    .nav-items a, .login-btn {
+      font-size: 0.9rem;
+    }
+    .navbar {
+      padding: 1rem 5%;
+    }
+    .navbar.scrolled {
+      padding: 0.5rem 5%;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

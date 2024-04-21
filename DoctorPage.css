@@ -1,0 +1,126 @@
+/* CSS styles for the doctor profile page */
+/* Global Styles */
+:root {
+    --primary-color: #0062E6;
+    --secondary-color: #33AEFF;
+    --highlight-color: #4A90E2; /* Neon green color for highlights */
+    --text-dark: #333;
+    --text-light: #b2b2b2; /* Light grey for text */
+    --background-dark: #0a0a0a; /* Dark grey for backgrounds */
+    --background-light: #121212; /* Even darker grey for footer and sections */
+    --font-family: 'Arial', sans-serif;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+    background: var(--background-light);
+    color: var(--text-light);
+  }
+  /* Doctor Profile Styles */
+  .doctor-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5%;
+  }
+  .doctor-info .info, .doctor-info .patients-info {
+    flex: 1;
+    margin-right: 2rem;
+  }
+  .doctor-info h2 {
+    color: var(--highlight-color);
+  }
+
+  .chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Set a height for the container if needed */
+  }
+  
+  .center-canvas {
+    display: block;
+  }
+  
+  /* Patient List Styles */
+  .patient-list {
+    padding: 2rem 5%;
+  }
+  .patient-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+  .patient-btn {
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--highlight-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .patient-btn:hover {
+    background-color: #e6b800;
+  }
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s, padding 0.3s;
+  }
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+  }
+  .nav-items a, .login-btn {
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .nav-items a:hover, .login-btn:hover {
+    color: var(--highlight-color);
+    transform: translateY(-2px);
+  }
+  .login-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Hero Section Styles */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    background-color: var(--background-dark);
+    color: white;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
