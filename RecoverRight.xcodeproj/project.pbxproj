@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		911F45F32BD506C000CFB1F3 /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F45F22BD506C000CFB1F3 /* GeminiService.swift */; };
+		911F45F72BD50ADC00CFB1F3 /* GeminiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F45F62BD50ADC00CFB1F3 /* GeminiViewModel.swift */; };
+		911F45F92BD50B0700CFB1F3 /* GeminiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911F45F82BD50B0700CFB1F3 /* GeminiView.swift */; };
+		911F45FC2BD50CD300CFB1F3 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 911F45FB2BD50CD300CFB1F3 /* GoogleGenerativeAI */; };
 		91A1E7962BD4EB1B00CDABBD /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A1E7952BD4EB1B00CDABBD /* Medication.swift */; };
 		91FBD18A2BD3B6EC0068178A /* RecoverRightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1892BD3B6EC0068178A /* RecoverRightApp.swift */; };
 		91FBD18C2BD3B6EC0068178A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD18B2BD3B6EC0068178A /* ContentView.swift */; };
@@ -23,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		911F45F22BD506C000CFB1F3 /* GeminiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiService.swift; sourceTree = "<group>"; };
+		911F45F62BD50ADC00CFB1F3 /* GeminiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiViewModel.swift; sourceTree = "<group>"; };
+		911F45F82BD50B0700CFB1F3 /* GeminiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiView.swift; sourceTree = "<group>"; };
 		91A1E7952BD4EB1B00CDABBD /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
 		91A1E7972BD4F19000CDABBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		91FBD1862BD3B6EC0068178A /* RecoverRight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecoverRight.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911F45FC2BD50CD300CFB1F3 /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +106,7 @@
 				91FBD19C2BD3B7D70068178A /* HealthKitManager.swift */,
 				91FBD1A32BD3FD0F0068178A /* JournalEntry.swift */,
 				91A1E7952BD4EB1B00CDABBD /* Medication.swift */,
+				911F45F22BD506C000CFB1F3 /* GeminiService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				91FBD18B2BD3B6EC0068178A /* ContentView.swift */,
+				911F45F82BD50B0700CFB1F3 /* GeminiView.swift */,
 				91FBD1A92BD459740068178A /* MedicineView.swift */,
 				91FBD1A02BD3B8690068178A /* HeartRateView.swift */,
 				91FBD1A72BD3FD8E0068178A /* JournalView.swift */,
@@ -118,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				91FBD19E2BD3B7F10068178A /* HeartRateViewModel.swift */,
+				911F45F62BD50ADC00CFB1F3 /* GeminiViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 			);
 			name = RecoverRight;
 			packageProductDependencies = (
+				911F45FB2BD50CD300CFB1F3 /* GoogleGenerativeAI */,
 			);
 			productName = RecoverRight;
 			productReference = 91FBD1862BD3B6EC0068178A /* RecoverRight.app */;
@@ -170,6 +182,7 @@
 			mainGroup = 91FBD17D2BD3B6EC0068178A;
 			packageReferences = (
 				91FBD1AB2BD47CB00068178A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				911F45FA2BD50CD200CFB1F3 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
 			);
 			productRefGroup = 91FBD1872BD3B6EC0068178A /* Products */;
 			projectDirPath = "";
@@ -201,9 +214,12 @@
 				91FBD19F2BD3B7F10068178A /* HeartRateViewModel.swift in Sources */,
 				91FBD1A82BD3FD8E0068178A /* JournalView.swift in Sources */,
 				91FBD18E2BD3B6EC0068178A /* Item.swift in Sources */,
+				911F45F72BD50ADC00CFB1F3 /* GeminiViewModel.swift in Sources */,
+				911F45F32BD506C000CFB1F3 /* GeminiService.swift in Sources */,
 				91A1E7962BD4EB1B00CDABBD /* Medication.swift in Sources */,
 				91FBD19D2BD3B7D70068178A /* HealthKitManager.swift in Sources */,
 				91FBD18A2BD3B6EC0068178A /* RecoverRightApp.swift in Sources */,
+				911F45F92BD50B0700CFB1F3 /* GeminiView.swift in Sources */,
 				91FBD1AA2BD459740068178A /* MedicineView.swift in Sources */,
 				91FBD1E32BD496DE0068178A /* FlipCardView.swift in Sources */,
 				91FBD1A42BD3FD0F0068178A /* JournalEntry.swift in Sources */,
@@ -421,6 +437,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		911F45FA2BD50CD200CFB1F3 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.11;
+			};
+		};
 		91FBD1AB2BD47CB00068178A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -430,6 +454,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		911F45FB2BD50CD300CFB1F3 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 911F45FA2BD50CD200CFB1F3 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91FBD17E2BD3B6EC0068178A /* Project object */;
 }

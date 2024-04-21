@@ -17,6 +17,8 @@ struct JournalView: View {
     @State private var isMenuExpanded = false
     @State private var showingHeartRate = false
     @State private var showingMedicineView = false
+    
+    @StateObject private var viewModel = GeminiViewModel()
 
     let gradient = LinearGradient(
         gradient: Gradient(colors: [.gradientTop, .gradientBottom]),
@@ -30,6 +32,7 @@ struct JournalView: View {
                 gradient.edgesIgnoringSafeArea(.all)
                 ScrollView {
                     VStack(alignment: .leading) {
+                        
                         ForEach(entries.reversed(), id: \.id) { entry in
                             JournalCardView(entry: entry)
                                 .padding()
@@ -65,6 +68,7 @@ struct JournalView: View {
                 }
             }
         }
+
         .sheet(isPresented: $showNewEntryView) {
             NewJournalEntryView(showNewEntryView: $showNewEntryView, newJournalContent: $newJournalContent)
         }
@@ -74,6 +78,16 @@ struct JournalView: View {
         .sheet(isPresented: $showingMedicineView) {
             MedicineView()  // Ensure you have defined this view somewhere in your code
         }
+    }
+    
+    private func generateAdviceFromEntries() {
+        let starterPrompt = "You're about to receive a bunch of journals I want you to analyze these for potential post-op complications."
+        let fullPrompt = entries.reduce(starterPrompt) { accum, entry in
+            accum + "\n\n" + entry.content
+        }
+        
+        viewModel.sendPrompt(prompt: fullPrompt)
+        
     }
     
     private var addButton: some View {
@@ -125,6 +139,23 @@ struct JournalView: View {
     }
 }
 
+struct CardView: View {
+    var text: String
+    var backgroundColor: Color = .blue // Default color is blue, you can set it to gray or black when using the view
+
+    var body: some View {
+        Text(text)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(backgroundColor)
+            .foregroundColor(.white) // Ensuring the text is readable on dark backgrounds
+            .cornerRadius(10)
+            .shadow(color: backgroundColor.opacity(0.5), radius: 5, x: 0, y: 2)
+            .padding(.horizontal)
+    }
+}
+
+
 struct NewJournalEntryView: View {
     @Binding var showNewEntryView: Bool
     @Binding var newJournalContent: String
@@ -164,6 +195,7 @@ struct NewJournalEntryView: View {
         showNewEntryView = false
         newJournalContent = ""
     }
+    
 }
     
     private func getFormattedDate() -> String {
@@ -181,7 +213,7 @@ struct JournalCardView: View {
         VStack(alignment: .leading, spacing: 10) {
             Text(entry.content)
                 .font(.body)
-                .foregroundColor(.black)  // Ensure the text color is black
+                .foregroundColor(.white)
                 .lineLimit(expanded ? nil : 3)  // Expand to show all text if expanded, otherwise show 3 lines.
                 .animation(.easeInOut, value: expanded)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -200,6 +232,10 @@ struct JournalCardView: View {
         .shadow(radius: 1)
         .padding(.horizontal)
     }
+}
+
+extension Color {
+    static let navyBlue = Color(red: 0 / 255, green: 0 / 255, blue: 128 / 255)
 }
 
 

@@ -49,6 +49,13 @@
             ReferencedContainer = "container:RecoverRight.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "API_KEY"
+            value = "AIzaSyDjJIcOn07xPEhDk8-5yamEcMUzkcCls34"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
