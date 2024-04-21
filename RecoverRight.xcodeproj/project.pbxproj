@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		915C4FE82BD52936006812A3 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 915C4FE72BD52936006812A3 /* GoogleGenerativeAI */; };
+		915C4FEA2BD52AF3006812A3 /* GeminiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915C4FE92BD52AF3006812A3 /* GeminiViewModel.swift */; };
+		91A1E7962BD4EB1B00CDABBD /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A1E7952BD4EB1B00CDABBD /* Medication.swift */; };
+		91FBD18A2BD3B6EC0068178A /* RecoverRightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1892BD3B6EC0068178A /* RecoverRightApp.swift */; };
+		91FBD18C2BD3B6EC0068178A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD18B2BD3B6EC0068178A /* ContentView.swift */; };
+		91FBD18E2BD3B6EC0068178A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD18D2BD3B6EC0068178A /* Item.swift */; };
+		91FBD1902BD3B6EE0068178A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FBD18F2BD3B6EE0068178A /* Assets.xcassets */; };
+		91FBD1932BD3B6EE0068178A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FBD1922BD3B6EE0068178A /* Preview Assets.xcassets */; };
+		91FBD19D2BD3B7D70068178A /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD19C2BD3B7D70068178A /* HealthKitManager.swift */; };
+		91FBD19F2BD3B7F10068178A /* HeartRateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD19E2BD3B7F10068178A /* HeartRateViewModel.swift */; };
+		91FBD1A12BD3B8690068178A /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1A02BD3B8690068178A /* HeartRateView.swift */; };
+		91FBD1A42BD3FD0F0068178A /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1A32BD3FD0F0068178A /* JournalEntry.swift */; };
+		91FBD1A82BD3FD8E0068178A /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1A72BD3FD8E0068178A /* JournalView.swift */; };
+		91FBD1AA2BD459740068178A /* MedicineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1A92BD459740068178A /* MedicineView.swift */; };
+		91FBD1E32BD496DE0068178A /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBD1E22BD496DE0068178A /* FlipCardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		915C4FE92BD52AF3006812A3 /* GeminiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiViewModel.swift; sourceTree = "<group>"; };
+		91A1E7952BD4EB1B00CDABBD /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		91A1E7972BD4F19000CDABBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		91FBD1862BD3B6EC0068178A /* RecoverRight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecoverRight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91FBD1892BD3B6EC0068178A /* RecoverRightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverRightApp.swift; sourceTree = "<group>"; };
+		91FBD18B2BD3B6EC0068178A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		91FBD18D2BD3B6EC0068178A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		91FBD18F2BD3B6EE0068178A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91FBD1922BD3B6EE0068178A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		91FBD19C2BD3B7D70068178A /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		91FBD19E2BD3B7F10068178A /* HeartRateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateViewModel.swift; sourceTree = "<group>"; };
+		91FBD1A02BD3B8690068178A /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		91FBD1A22BD3B8C00068178A /* RecoverRight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecoverRight.entitlements; sourceTree = "<group>"; };
+		91FBD1A32BD3FD0F0068178A /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		91FBD1A72BD3FD8E0068178A /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		91FBD1A92BD459740068178A /* MedicineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineView.swift; sourceTree = "<group>"; };
+		91FBD1E22BD496DE0068178A /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91FBD1832BD3B6EC0068178A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				915C4FE82BD52936006812A3 /* GoogleGenerativeAI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91FBD17D2BD3B6EC0068178A = {
+			isa = PBXGroup;
+			children = (
+				91FBD1882BD3B6EC0068178A /* RecoverRight */,
+				91FBD1872BD3B6EC0068178A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91FBD1872BD3B6EC0068178A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91FBD1862BD3B6EC0068178A /* RecoverRight.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91FBD1882BD3B6EC0068178A /* RecoverRight */ = {
+			isa = PBXGroup;
+			children = (
+				91A1E7972BD4F19000CDABBD /* Info.plist */,
+				91FBD1A22BD3B8C00068178A /* RecoverRight.entitlements */,
+				91FBD1892BD3B6EC0068178A /* RecoverRightApp.swift */,
+				91FBD1992BD3B7790068178A /* Model */,
+				91FBD19B2BD3B7890068178A /* ViewModel */,
+				91FBD19A2BD3B7810068178A /* Views */,
+				91FBD18D2BD3B6EC0068178A /* Item.swift */,
+				91FBD18F2BD3B6EE0068178A /* Assets.xcassets */,
+				91FBD1912BD3B6EE0068178A /* Preview Content */,
+			);
+			path = RecoverRight;
+			sourceTree = "<group>";
+		};
+		91FBD1912BD3B6EE0068178A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				91FBD1922BD3B6EE0068178A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		91FBD1992BD3B7790068178A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91FBD19C2BD3B7D70068178A /* HealthKitManager.swift */,
+				91FBD1A32BD3FD0F0068178A /* JournalEntry.swift */,
+				91A1E7952BD4EB1B00CDABBD /* Medication.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91FBD19A2BD3B7810068178A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				91FBD18B2BD3B6EC0068178A /* ContentView.swift */,
+				91FBD1A92BD459740068178A /* MedicineView.swift */,
+				91FBD1A02BD3B8690068178A /* HeartRateView.swift */,
+				91FBD1A72BD3FD8E0068178A /* JournalView.swift */,
+				91FBD1E22BD496DE0068178A /* FlipCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		91FBD19B2BD3B7890068178A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				91FBD19E2BD3B7F10068178A /* HeartRateViewModel.swift */,
+				915C4FE92BD52AF3006812A3 /* GeminiViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91FBD1852BD3B6EC0068178A /* RecoverRight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91FBD1962BD3B6EE0068178A /* Build configuration list for PBXNativeTarget "RecoverRight" */;
+			buildPhases = (
+				91FBD1822BD3B6EC0068178A /* Sources */,
+				91FBD1832BD3B6EC0068178A /* Frameworks */,
+				91FBD1842BD3B6EC0068178A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecoverRight;
+			packageProductDependencies = (
+				915C4FE72BD52936006812A3 /* GoogleGenerativeAI */,
+			);
+			productName = RecoverRight;
+			productReference = 91FBD1862BD3B6EC0068178A /* RecoverRight.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91FBD17E2BD3B6EC0068178A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					91FBD1852BD3B6EC0068178A = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 91FBD1812BD3B6EC0068178A /* Build configuration list for PBXProject "RecoverRight" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91FBD17D2BD3B6EC0068178A;
+			packageReferences = (
+				91FBD1AB2BD47CB00068178A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				915C4FE62BD52936006812A3 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+			);
+			productRefGroup = 91FBD1872BD3B6EC0068178A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91FBD1852BD3B6EC0068178A /* RecoverRight */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91FBD1842BD3B6EC0068178A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FBD1932BD3B6EE0068178A /* Preview Assets.xcassets in Resources */,
+				91FBD1902BD3B6EE0068178A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91FBD1822BD3B6EC0068178A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FBD18C2BD3B6EC0068178A /* ContentView.swift in Sources */,
+				915C4FEA2BD52AF3006812A3 /* GeminiViewModel.swift in Sources */,
+				91FBD19F2BD3B7F10068178A /* HeartRateViewModel.swift in Sources */,
+				91FBD1A82BD3FD8E0068178A /* JournalView.swift in Sources */,
+				91FBD18E2BD3B6EC0068178A /* Item.swift in Sources */,
+				91A1E7962BD4EB1B00CDABBD /* Medication.swift in Sources */,
+				91FBD19D2BD3B7D70068178A /* HealthKitManager.swift in Sources */,
+				91FBD18A2BD3B6EC0068178A /* RecoverRightApp.swift in Sources */,
+				91FBD1AA2BD459740068178A /* MedicineView.swift in Sources */,
+				91FBD1E32BD496DE0068178A /* FlipCardView.swift in Sources */,
+				91FBD1A42BD3FD0F0068178A /* JournalEntry.swift in Sources */,
+				91FBD1A12BD3B8690068178A /* HeartRateView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		91FBD1942BD3B6EE0068178A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		91FBD1952BD3B6EE0068178A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91FBD1972BD3B6EE0068178A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RecoverRight/RecoverRight.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RecoverRight/Preview Content\"";
+				DEVELOPMENT_TEAM = A26R2TGLCH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecoverRight/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your heart rate data to provide personalized health insights and recommendations.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adolfocalderon.RecoverRight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91FBD1982BD3B6EE0068178A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RecoverRight/RecoverRight.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RecoverRight/Preview Content\"";
+				DEVELOPMENT_TEAM = A26R2TGLCH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecoverRight/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to your heart rate data to provide personalized health insights and recommendations.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adolfocalderon.RecoverRight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91FBD1812BD3B6EC0068178A /* Build configuration list for PBXProject "RecoverRight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FBD1942BD3B6EE0068178A /* Debug */,
+				91FBD1952BD3B6EE0068178A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91FBD1962BD3B6EE0068178A /* Build configuration list for PBXNativeTarget "RecoverRight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FBD1972BD3B6EE0068178A /* Debug */,
+				91FBD1982BD3B6EE0068178A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		915C4FE62BD52936006812A3 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.11;
+			};
+		};
+		91FBD1AB2BD47CB00068178A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		915C4FE72BD52936006812A3 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 915C4FE62BD52936006812A3 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 91FBD17E2BD3B6EC0068178A /* Project object */;
+}
